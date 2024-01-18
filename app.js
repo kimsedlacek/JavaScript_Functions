@@ -7,29 +7,34 @@ function printOdds(count){
         if (i % 2 != 0){
             console.log(`${i} is an odd number.`)
         }else console.log(`${i} is an even number.`)
-       }
+        }
+        if (count < 0){
+            console.log(`Please enter a number above 0.`)
+        }
     }
-                
+    
+printOdds(15);
+printOdds(-88);       
 
-
-printOdds(12);
 
 // Exercise 2 Section
 console.log("EXERCISE 2:\n==========\n");
 
-function checkAge(userName, age){
+function checkAge(userName = "Driver", age){
     let aboveSixteen = `"Congrats ${userName}, you can drive!"`
     let belowSixteen = `"Sorry ${userName}, but you need to wait until you're 16."`
-
-    if (age >= 16){
+    
+    if (userName == null | age == null){
+       console.log(`"${userName}, please enter the required information to determine eligibility."`);
+    }else if (age >= 16){
         console.log(aboveSixteen);
     }else console.log(belowSixteen);
 }
-
 checkAge("Sebastian", 17);
 checkAge("Joey", 14);
+checkAge();
 
-
+     
 // Exercise 3 Section
 console.log("EXERCISE 3:\n==========\n");
 //use switch case ?
